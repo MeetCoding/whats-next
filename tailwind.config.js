@@ -20,13 +20,17 @@ module.exports = {
         },
         extend: {
             spacing: {
-                'field': '40px',
+                'field': '35px',
                 'panel': '440px',
                 'result': '80px',
                 'button': '50px',
+                'title-elevation': '-40px'
             },
             maxWidth: {
                 'panel': '400px',
+            },
+            lineHeight: {
+                'field': '35px'
             },
         },
     },

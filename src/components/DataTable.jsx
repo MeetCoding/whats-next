@@ -33,12 +33,12 @@ export default function DataTable() {
     }, [])
 
     return (
-        <div className='w-5/6 max-w-panel h-panel flex flex-col'>
-            <div className='flex justify-between items-center underline text-white'>
+        <div className='relative w-5/6 max-w-panel h-panel'>
+            <div className='absolute top-title-elevation w-full flex justify-between items-center underline text-white'>
                 <h3 className='mx-7 my-2 text-lg font-semibold'>Test</h3>
                 <h3 className='mx-7 my-2 text-lg font-semibold'>Observation</h3>
             </div>
-            <div className='relative bg-gray-300 rounded-lg p-6 flex flex-col flex-grow justify-start items-stretch gap-5 overflow-y-scroll overflow-visible'>
+            <div className='relative bg-gray-300 w-full h-full rounded-lg p-6 flex flex-col justify-start items-stretch gap-5 overflow-y-scroll overflow-visible'>
                 {fields.map(field => React.cloneElement(
                     field,
                     { addField, removeField },
