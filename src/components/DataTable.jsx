@@ -38,7 +38,7 @@ export default function DataTable() {
                 <h3 className='mx-7 my-2 text-lg font-semibold'>Test</h3>
                 <h3 className='mx-7 my-2 text-lg font-semibold'>Observation</h3>
             </div>
-            <div className='relative bg-gray-300 w-full h-full rounded-lg p-6 flex flex-col justify-start items-stretch gap-5 overflow-y-scroll overflow-visible'>
+            <div className='bg-gray-300 w-full h-full rounded-lg px-6 py-3 overflow-y-scroll'>
                 {fields.map(field => React.cloneElement(
                     field,
                     { addField, removeField },
