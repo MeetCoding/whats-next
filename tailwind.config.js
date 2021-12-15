@@ -16,7 +16,8 @@ module.exports = {
             },
         },
         fontFamily: {
-            'poppins': ['Poppins', 'sans-serif']
+            'poppins': ['Poppins', 'sans-serif'],
+            'mono': ['Ubuntu Mono', 'monospace'],
         },
         extend: {
             spacing: {
