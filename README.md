@@ -1,6 +1,6 @@
 ## Website Link
 
-[Live Website](https://whats-next.netlify.app)
+[Live Website](https://what-next.netlify.app)
 
 # What is whats-next?
 
