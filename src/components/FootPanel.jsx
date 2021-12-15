@@ -5,7 +5,7 @@ export default function FootPanel() {
     const dispatch = useDispatch();
 
     return (
-        <div className='w-full flex justify-between items-center text-2xl'>
+        <div className='w-full flex justify-between items-center text-2xl gap-5'>
             <button
                 className='bg-blue rounded-md px-5 py-1 font-bold text-gray-100'
                 onClick={() => dispatch('EXECUTE')}
