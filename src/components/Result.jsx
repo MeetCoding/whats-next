@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useData, useDispatch } from './../DataContex';
 
 export default function Result() {
@@ -44,39 +44,3 @@ const ResultField = ({ children }) => (
         {children}
     </div>
 )
-
-const TestField = ({ error, setError }) => {
-
-    const [search, setSearch] = useState(0);
-
-    function handleChange(e) {
-        setError(isNaN(e.target.value));
-        setSearch(e.target.value);
-    }
-
-    return (
-        <div className={`w-52 h-field my-4 grid grid-rows-1 grid-cols-2 m-auto bg-blue border-blue border-2 rounded-md ${error && 'border-red bg-red'}`}>
-            <h3 className='font-semibold text-lg'>Test</h3>
-            <input
-                type="text"
-                className='rounded-r-md text-white text-center bg-gray-200'
-                value={search}
-                onChange={handleChange}
-            />
-        </div>
-    )
-}
-const AnswerField = ({ error }) => {
-
-    const data = useData();
-    const dispatch = useDispatch();
-
-    return (
-        <div className={`w-52 h-field my-4 grid grid-rows-1 grid-cols-2 m-auto bg-blue border-blue border-2 rounded-md ${error && 'border-red bg-red'}`}>
-            <h3 className='font-semibold text-lg'>Answer</h3>
-            <p
-                className='rounded-r-md text-white text-center bg-gray-400 leading-field'
-            >{data.answer}</p>
-        </div>
-    )
-}
