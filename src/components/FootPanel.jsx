@@ -5,7 +5,7 @@ import ErrorMessage from './ErrorMessage';
 export default function FootPanel() {
     const data = useData();
     const dispatch = useDispatch();
-    const [error, setError] = useState(true);
+    const [error, setError] = useState(false);
 
     function calculate() {
         const feedSet = new Set(
