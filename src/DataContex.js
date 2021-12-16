@@ -19,7 +19,7 @@ const initValue = {
     f: x => 2 * x,
     str: "f(x) => 2x",
     test: 1,
-    answer: 1,
+    answer: 2,
     feed: [
         [2, 4],
         [3, 6]
@@ -65,7 +65,7 @@ const reducers = {
             answer: 1,
             feed: [
                 [1, 1],
-                [1, 1],
+                [2, 2],
             ]
         }
     },

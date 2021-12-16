@@ -15,18 +15,11 @@ export function format(func) {
             default: return [val, `x^{${power}}`];
         }
     })
-    console.log(terms);
     let termsStr = terms
         .filter(val => val[0] !== 0)
-        .reduce((total, curr) => {
-            let append = "";
-            switch (curr[0]) {
-                case 0: break;
-                case 1: append = `${curr[1]} + `; break;
-                default: append = `${curr[0]}${curr[1]} + `; break;
-            }
-            return total + append;
-        }, "")
+        .reduce((total, curr) => (
+            curr[0] === 0 ? '' : total + `${curr[0]}${curr[1]} + `
+        ), "")
     return "f(x) => " + termsStr.slice(0, termsStr.length - 3);
 }
 

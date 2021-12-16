@@ -8,5 +8,5 @@ ReactDOM.render(
     <DataProvider>
         <App />
     </DataProvider>,
-    document.getElementById("root")
+    document.querySelector("#root")
 );
