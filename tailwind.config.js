@@ -31,7 +31,8 @@ module.exports = {
                 'panel': '400px',
             },
             lineHeight: {
-                'field': '35px'
+                'field': '35px',
+                '20': '80px',
             },
         },
     },

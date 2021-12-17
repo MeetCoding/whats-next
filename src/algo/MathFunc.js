@@ -15,7 +15,8 @@ export function format(func) {
             default: return [val, `x^{${power}}`];
         }
     })
-    let termsStr = terms
+    let roundedTerms = terms.map(val => [Math.round(val[0] * 100) / 100, val[1]]);
+    let termsStr = roundedTerms
         .filter(val => val[0] !== 0)
         .reduce((total, curr) => (
             curr[0] === 0 ? '' : total + `${curr[0]}${curr[1]} + `

@@ -14,12 +14,10 @@ export default function Result() {
     return (
         <div className='w-full rounded-lg bg-gray-300 text-center py-5 px-7 mb-10'>
             <h1 className='underline text-white font-bold text-2xl'>Result</h1>
-            <div className='w-full h-20 bg-gray-400 my-4 rounded-md flex justify-center items-center'>
-                <h2
-                    className='text-white font-bold text-xl font-mono'
-                    dangerouslySetInnerHTML={{ __html: data.str }}
-                ></h2>
-            </div>
+            <h2
+                className='w-full h-20 leading-20 bg-gray-400 my-4 rounded-md overflow-x-scroll text-white font-bold text-xl px-3 font-mono whitespace-nowrap'
+                dangerouslySetInnerHTML={{ __html: data.str }}
+            ></h2>
             <ResultField >
                 <h3 className='font-semibold text-lg'>Test</h3>
                 <input
@@ -32,7 +30,7 @@ export default function Result() {
             <ResultField>
                 <h3 className='font-semibold text-lg'>Answer</h3>
                 <p
-                    className='rounded-r-md text-white text-center bg-gray-400 leading-field'
+                    className='rounded-r-md text-white text-center bg-gray-400 leading-field overflow-x-scroll px-3'
                 >{data.answer}</p>
             </ResultField>
         </div>
